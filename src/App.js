@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import Navigation from './components/Navigation';
+import Navigation from './components/Navagationbar/Navigation';
 import './App.css';
 
 function App() {
