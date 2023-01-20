@@ -15,7 +15,7 @@ const Project = ({},context)=>{
     return (
         <div>
 
-            project
+            EMPTY
             
         </div>
     )

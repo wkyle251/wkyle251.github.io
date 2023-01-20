@@ -15,7 +15,7 @@ const Home = ({},context)=>{
     return (
         <div>
 
-            home
+            Hi! I'm going to update this website.
 
         </div>
     )

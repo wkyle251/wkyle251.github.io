@@ -7,23 +7,37 @@ import Project from './components/Main/Project';
 import About from './components/Main/About';
 import Profile from './components/Main/Profile';
 import Contact from './components/Main/Contact';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { green, orange } from '@mui/material/colors';
 
-
+const mainTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#3a4660",
+      // contrastText: '#fefad9',
+    },
+    secondary: {
+      main: green[500],
+    },
+  },
+});
 function App() {
 
   return (
-    <BrowserRouter>
-      <Navigation />
-      <Routes>
-        <Route path='/' element={<Navigate to="/Home" />}></Route>
-        <Route path="*" element={<Blank />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Project" element={<Project />} />
-        <Route path="/Introduction" element={<About />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={mainTheme}>
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route path='/' element={<Navigate to="/Home" />}></Route>
+          <Route path="*" element={<Blank />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Project" element={<Project />} />
+          <Route path="/Introduction" element={<About />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 

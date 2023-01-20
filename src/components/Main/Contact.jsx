@@ -13,11 +13,13 @@ const Contact = ({},context)=>{
     const classes = useStyles()
 
     return (
-        <div>
-
-            contact
-            
-        </div>
+        <>
+        
+        
+        
+        
+        
+        </>
     )
 
 
