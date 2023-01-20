@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     main: {
         display: "grid",
         "grid-template-columns": "repeat(3,1fr)",
-        "column-gap": "20vw",
+        // "column-gap": "5%",
         "row-gap": "6vh",
         justifyContent: "center"
     }
@@ -22,58 +22,59 @@ const Contact = ({ }, context) => {
 
     const classes = useStyles()
 
+    const infoList = [
+        {
+            label: "Email",
+            href: "mailto:kyle147@ymail.com",
+            icon: <EmailIcon />
+        },
+        {
+            label: "GitHub",
+            href: "https://github.com/wkyle251",
+            icon: <GitHubIcon />
+        },
+        {
+            label: "Instagram",
+            href: "https://www.instagram.com/wkyle_1",
+            icon: <InstagramIcon />
+        },
+        {
+            label: "Phone",
+            href: "Tel:+852 97114437",
+            icon: <PhonelinkRingIcon />
+        },
+        {
+            label: "Signal",
+            href: "sgnl://signal.me/#p/+852 97114437",
+            icon: <img src={signalIcon} />
+        },
+        {
+            label: "WhatsApp",
+            href: "https://wa.me/85297114437",
+            icon: <WhatsAppIcon />
+        },
+    ]
+
+
     return (
         <div className={classes.main}>
-            <Chip
-                avatar={<EmailIcon />}
-                label="Email"
-                variant="outlined"
-                href="mailto:kyle147@ymail.com"
-                component="a"
-                clickable
-            />
-            <Chip
-                avatar={<GitHubIcon />}
-                label="GitHub"
-                variant="outlined"
-                component="a"
-                href="https://github.com/wkyle251"
-                clickable
-            />
-            <Chip
-                avatar={<InstagramIcon />}
-                label="Instagram"
-                variant="outlined"
-                component="a"
-                href="https://www.instagram.com/wkyle_1"
-                clickable
-            />
-            <Chip
-                avatar={<PhonelinkRingIcon />}
-                label="Phone"
-                variant="outlined"
-                component="a"
-                href="Tel:+852 97114437"
-                clickable
-            />
-            <Chip
-                avatar={<img src={signalIcon} />}
-                label="Signal"
-                variant="outlined"
-                component="a"
-                href="sgnl://signal.me/#p/+852 97114437"
-                clickable
-            />
-            <Chip
-                avatar={<WhatsAppIcon />}
-                label="WhatsApp"
-                variant="outlined"
-                component="a"
-                href="https://wa.me/85297114437"
-                clickable
-            />
 
-
+            {infoList.map(x =>
+                <Chip
+                    avatar={x.icon}
+                    label={x.label}
+                    variant="outlined"
+                    href={x.href}
+                    component="a"
+                    clickable
+                    key={x.label}
+                    sx={{
+                        "padding":"1vh 3vw 1vh 3vw",
+                        "width":"20vw",
+                        justifySelf:"center"
+                    }}
+                />
+            )}
 
         </div>
     )
