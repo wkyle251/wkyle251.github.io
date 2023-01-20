@@ -16,3 +16,6 @@
   padding: 2em;
 }
 
+#pdf-controls {
+  display: none;
+}
