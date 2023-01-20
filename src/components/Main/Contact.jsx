@@ -11,7 +11,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const useStyles = makeStyles(() => ({
     main: {
         display: "grid",
-        "grid-template-columns": "repeat(3,10vw)",
+        "grid-template-columns": "repeat(3,1fr)",
         "column-gap": "20vw",
         "row-gap": "6vh",
         justifyContent: "center"
