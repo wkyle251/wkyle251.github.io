@@ -16,6 +16,8 @@ const Home = ({},context)=>{
         <div>
 
             Hi! I'm going to update this website.
+            Desktop view only!
+            Improving.
 
         </div>
     )
