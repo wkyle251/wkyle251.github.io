@@ -24,6 +24,7 @@
     "react-doc-viewer": "^0.1.5",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.7.0",
+    "react-scroll-motion": "^0.3.2",
     "web-vitals": "^1.1.2"
   },
   "devDependencies": {

@@ -12,7 +12,6 @@ const useStyles = makeStyles(() => ({
     main: {
         display: "grid",
         "grid-template-columns": "repeat(3,1fr)",
-        // "column-gap": "5%",
         "row-gap": "6vh",
         justifyContent: "center"
     }

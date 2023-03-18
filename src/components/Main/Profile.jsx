@@ -2,8 +2,6 @@ import React, { useEffect, useState, useMemo } from "react"
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@mui/material/Button';
 import { saveAs } from 'file-saver';
-// import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import cv2022 from '../../assets/cv2022.pdf'
 import FileSaver from "file-saver";
 import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
 
@@ -20,12 +18,14 @@ const Profile = ({ }, context) => {
 
     const classes = useStyles()
 
+    const cvfile = "./cv2023.pdf"
+
     const DownloadCv = () => {
-        FileSaver.saveAs(cv2022, "Kyle CV.pdf")
+        FileSaver.saveAs(cvfile, "Kyle CV.pdf")
     }
 
     const docs = [
-        { uri: cv2022, },
+        { uri: cvfile, },
     ];
 
     return (
